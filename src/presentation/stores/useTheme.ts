@@ -1,27 +1,9 @@
-import { onMounted, ref } from 'vue'
+import type { IThemeRepository } from '@/core/interfaces/IThemeRepository'
+import { THEME_REPO_KEY } from '@/infrastructure/di/keys'
+import { inject } from 'vue'
 
-const isDark = ref(false)
-
-export function useTheme() {
-  onMounted(() => {
-    const saved = localStorage.getItem('theme')
-    if (saved) {
-      isDark.value = saved === 'dark'
-    } else {
-      isDark.value = window.matchMedia('(prefers-color-scheme: dark)').matches
-    }
-    applyTheme()
-  })
-
-  function applyTheme() {
-    document.documentElement.classList.toggle('theme-dark', isDark.value) // ← tu selector
-    localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
-  }
-
-  function toggleTheme() {
-    isDark.value = !isDark.value
-    applyTheme()
-  }
-
-  return { isDark, toggleTheme }
+export function useTheme(): IThemeRepository {
+  const repo = inject(THEME_REPO_KEY)
+  if (!repo) throw new Error('ThemeRepository not provided — did you call setupDI()?')
+  return repo
 }
