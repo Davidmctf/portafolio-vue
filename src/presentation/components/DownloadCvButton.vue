@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { downloadFile } from '@/presentation/stores/downloadFIle'
+import { downloadFile } from '@/data/utils/downloadFIle'
 
 const { t } = useI18n()
 function downloadCV(format: 'pdf' | 'html') {
