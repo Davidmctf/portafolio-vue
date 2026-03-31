@@ -1,0 +1,28 @@
+<svg width="100%" viewBox="0 0 680 690" xmlns="http://www.w3.org/2000/svg">
+
+
+  <rect width="680" height="680" fill="#0d1b2a" rx="16"
+    style="fill:rgb(13, 27, 42);stroke:none;rx:340;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto" />
+
+  <circle cx="340" cy="340" r="295" stroke-width="6"
+    style="fill:none;stroke:rgb(56, 189, 248);color:rgb(255, 255, 255);stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto" />
+  <circle cx="340" cy="340" r="274" stroke-width="10"
+    style="fill:none;stroke:rgb(56, 189, 248);color:rgb(255, 255, 255);stroke-width:10px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto" />
+
+  <path fill="none" stroke-width="46" stroke-linecap="round"
+    d="M 496,186&#10;     A 220,220 0 1 0 496,494"
+    style="fill:none;stroke:rgb(56, 189, 248);color:rgb(255, 255, 255);stroke-width:46px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto" />
+
+  <!-- D igual -->
+  <rect x="245" y="180" width="44" height="320" rx="4"
+    style="fill:rgb(56, 189, 248);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto" />
+  <path
+    d="M 284,180&#10;     L 353,180&#10;     Q 495,180 495,340&#10;     Q 495,500 353,500&#10;     L 284,500&#10;     L 284,455&#10;     L 353,455&#10;     Q 448,455 448,340&#10;     Q 448,225 353,225&#10;     L 284,225&#10;     Z"
+    style="fill:rgb(56, 189, 248);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto" />
+
+  <!-- M centrada en D: D va de y=180 a y=500, centro=340, altura M=114, y=283 -->
+  <path
+    d="M 300,283&#10;     L 300,397&#10;     L 324,397&#10;     L 324,331&#10;     L 353,379&#10;     L 382,331&#10;     L 382,397&#10;     L 406,397&#10;     L 406,283&#10;     L 382,283&#10;     L 353,331&#10;     L 324,283&#10;     Z"
+    style="fill:rgb(56, 189, 248);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto" />
+
+</svg>
