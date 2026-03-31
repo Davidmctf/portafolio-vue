@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import type { TreeNode } from 'primevue/treenode'
+import DmcLogo from '@/presentation/components/DmcLogo.vue'
 
 const { t } = useI18n()
 
@@ -147,12 +148,7 @@ const enterFade = 'animate-enter fade-in-10 zoom-in-50 animate-duration-1000'
       <div class="flex flex-col md:flex-row gap-12 items-center">
         <!-- Avatar / logo lado izquierdo -->
         <div v-animateonscroll="{ enterClass: enterLeft }" class="flex-shrink-0">
-          <Avatar
-            image="/src/assets/logo.svg"
-            shape="circle"
-            size="xlarge"
-            class="w-40 h-40 border-4 border-primary"
-          />
+          <DmcLogo :size="100" />
         </div>
 
         <!-- Texto lado derecho -->
