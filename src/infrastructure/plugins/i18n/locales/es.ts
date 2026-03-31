@@ -82,7 +82,7 @@ export default {
     mobiik: {
       title: 'Full-Stack Developer',
       company: 'mobiik',
-      period: '2023 - Presente',
+      period: '2023 - 2026',
       description:
         'Desarrollo de soluciones cloud con integración de IA, agentes conversacionales con LangGraph y Claude AI, APIs REST con NestJS, frontends con Angular y Vue 3, e integraciones con JIRA y Slack.',
     },

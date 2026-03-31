@@ -2,6 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { useLanguage } from '@/presentation/stores/useLanguage'
+import DownlaadCvButton from '@/presentation/components/DownloadCvButton.vue'
 
 const { t } = useI18n()
 const router = useRouter()
@@ -15,12 +16,6 @@ const emit = defineEmits<{
   scroll: [section: string]
 }>()
 
-function downloadCV(format: 'pdf' | 'html') {
-  const link = document.createElement('a')
-  link.href = `/assets/cv/david-cruz-cv.${format}`
-  link.download = `david-cruz-cv.${format}`
-  link.click()
-}
 </script>
 
 <template>
@@ -90,24 +85,7 @@ function downloadCV(format: 'pdf' | 'html') {
             <span class="text-xs uppercase tracking-widest">
               {{ t('footer.download_cv') }}
             </span>
-            <div class="flex gap-2">
-              <Button
-                label="PDF"
-                icon="pi pi-file-pdf"
-                severity="success"
-                size="small"
-                rounded
-                @click="downloadCV('pdf')"
-              />
-              <Button
-                label="HTML"
-                icon="pi pi-file"
-                severity="info"
-                size="small"
-                rounded
-                @click="downloadCV('html')"
-              />
-            </div>
+            <DownlaadCvButton />
           </div>
 
           <!-- Idioma -->

@@ -40,7 +40,7 @@ export default {
       {
         company: 'Tech Company A',
         role: 'Frontend Developer',
-        duration: '2020 - Present',
+        duration: '2020 - 2026',
         description: 'Developing modern user interfaces using Vue.js and React.',
       },
       {
