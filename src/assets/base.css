@@ -3,10 +3,10 @@
 
 body {
   background-color: var(--p-surface-100); /* claro */
-  color: var(--p-surface-900);
+  color: var(--p-surface-800);
 }
 
 .theme-dark body {
-  background-color: var(--p-surface-900); /* soho.800 = #2d2d40 */
+  background-color: var(--p-surface-800); /* soho.800 = #2d2d40 */
   color: var(--p-surface-50);
 }

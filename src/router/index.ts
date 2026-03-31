@@ -7,7 +7,12 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
+      meta: { title: 'Portafolio' },
       component: HomeView,
+    },
+    {
+      path: '/:pathMatch(.*)*', // wildcard
+      redirect: '/',
     },
   ],
 })

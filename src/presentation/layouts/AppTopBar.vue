@@ -26,7 +26,13 @@ const navItems = computed<MenuItem[]>(() => [
   {
     label: t('nav.home'),
     icon: 'pi pi-home',
-    command: () => router.push('/'),
+    command: () => {
+      if (props.isHome) {
+        emit('scroll', 'home')
+      } else {
+        router.push('/')
+      }
+    },
   },
   ...(props.isHome
     ? [

@@ -3,12 +3,14 @@ import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { useLanguage } from '@/presentation/stores/useLanguage'
 import DownlaadCvButton from '@/presentation/components/DownloadCvButton.vue'
+import { computed } from 'vue'
+import type { MenuItem } from 'primevue/menuitem'
 
 const { t } = useI18n()
 const router = useRouter()
 const { isSpanish, toggleLocale } = useLanguage()
 
-defineProps<{
+const props = defineProps<{
   isHome?: boolean
 }>()
 
@@ -16,6 +18,48 @@ const emit = defineEmits<{
   scroll: [section: string]
 }>()
 
+const linksItems = computed<MenuItem[]>(() => [
+  {
+    label: t('nav.home'),
+    icon: 'pi pi-home',
+    command: () => {
+      if (props.isHome) {
+        emit('scroll', 'home')
+      } else {
+        router.push('/')
+      }
+    },
+  },
+  ...(props.isHome
+    ? [
+        {
+          label: t('nav.aboutme'),
+          icon: 'pi pi-user',
+          command: () => emit('scroll', 'aboutme'),
+        },
+        {
+          label: t('nav.experience'),
+          icon: 'pi pi-briefcase',
+          command: () => emit('scroll', 'experience'),
+        },
+      ]
+    : []),
+  {
+    label: t('nav.projects'),
+    icon: 'pi pi-folder-open',
+    command: () => router.push('/proyectos'),
+  },
+  {
+    label: 'SFD',
+    icon: 'pi pi-sitemap',
+    command: () => router.push('/sfd-project'),
+  },
+  {
+    label: t('nav.profile'),
+    icon: 'pi pi-arrow-right-arrow-left',
+    command: () => router.push('/profile'),
+  },
+])
 </script>
 
 <template>
@@ -41,7 +85,12 @@ const emit = defineEmits<{
             {{ t('footer.links') }}
           </span>
 
-          <a class="footer-link" @click="router.push('/')">
+          <template v-for="(item, i) in linksItems" :key="i">
+            <a class="footer-link" @click="item.command?.()">
+              {{ item.label }}
+            </a>
+          </template>
+          <!-- <a class="footer-link" @click="router.push('/')">
             {{ t('nav.home') }}
           </a>
 
@@ -52,15 +101,15 @@ const emit = defineEmits<{
             <a class="footer-link" @click="emit('scroll', 'experience')">
               {{ t('nav.experience') }}
             </a>
-          </template>
+          </template> -->
 
-          <RouterLink class="footer-link" to="/proyectos">
+          <!-- <RouterLink class="footer-link" to="/proyectos">
             {{ t('nav.projects') }}
           </RouterLink>
           <RouterLink class="footer-link" to="/sfd-project"> SFD </RouterLink>
           <RouterLink class="footer-link" to="/profile">
             {{ t('nav.profile') }}
-          </RouterLink>
+          </RouterLink> -->
         </div>
 
         <!-- Col 3 — Social + CV + Language -->

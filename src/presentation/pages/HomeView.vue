@@ -86,16 +86,16 @@ const studyNodes: TreeNode[] = [
 ]
 
 const stats = [
-  { value: '4+', label: t('stats.experience'), icon: 'pi pi-briefcase' },
-  { value: '10+', label: t('stats.projects'), icon: 'pi pi-folder-open' },
-  { value: '6+', label: t('stats.stacks'), icon: 'pi pi-code' },
-  { value: '3', label: t('stats.companies'), icon: 'pi pi-building' },
+  { value: '4+', label: 'stats.experience', icon: 'pi pi-briefcase' },
+  { value: '10+', label: 'stats.projects', icon: 'pi pi-folder-open' },
+  { value: '6+', label: 'stats.stacks', icon: 'pi pi-code' },
+  { value: '3', label: 'stats.companies', icon: 'pi pi-building' },
 ]
 
 const workAreas = [
-  { icon: 'pi pi-desktop', title: t('areas.fullstack'), desc: t('areas.fullstack_desc') },
-  { icon: 'pi pi-cloud', title: t('areas.cloud'), desc: t('areas.cloud_desc') },
-  { icon: 'pi pi-android', title: t('areas.mobile'), desc: t('areas.mobile_desc') },
+  { icon: 'pi pi-desktop', title: 'areas.fullstack', desc: 'areas.fullstack_desc' },
+  { icon: 'pi pi-cloud', title: 'areas.cloud', desc: 'areas.cloud_desc' },
+  { icon: 'pi pi-android', title: 'areas.mobile', desc: 'areas.mobile_desc' },
 ]
 
 const enterLeft = 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000'
@@ -107,7 +107,7 @@ const enterFade = 'animate-enter fade-in-10 zoom-in-50 animate-duration-1000'
 <template>
   <div class="flex flex-col">
     <!-- ░░ HERO ░░ -->
-    <section class="max-w-5xl mx-auto px-6 py-24 w-full">
+    <section id="home" class="max-w-5xl mx-auto px-6 py-24 w-full">
       <div
         v-animateonscroll="{ enterClass: 'animate-fadein', leaveClass: 'animate-fadeout' }"
         class="flex flex-col gap-5"
@@ -137,7 +137,7 @@ const enterFade = 'animate-enter fade-in-10 zoom-in-50 animate-duration-1000'
         >
           <span class="bg-white/20 text-xl font-bold rounded-xl px-4 py-2">{{ stat.value }}</span>
           <i :class="[stat.icon, '!text-2xl']" />
-          <span class="text-center font-medium">{{ stat.label }}</span>
+          <span class="text-center font-medium">{{ t(stat.label) }}</span>
         </div>
       </div>
     </section>
@@ -161,7 +161,7 @@ const enterFade = 'animate-enter fade-in-10 zoom-in-50 animate-duration-1000'
           <div class="flex flex-wrap gap-2 mt-2">
             <Chip label="Puebla, MX" icon="pi pi-map-marker" />
             <Chip label="Full-Stack Dev" icon="pi pi-code" />
-            <Chip label="4+ años exp." icon="pi pi-calendar" />
+            <Chip :label="'+' + t('skills.years', { n: 4 }) + ' exp.'" icon="pi pi-calendar" />
           </div>
         </div>
       </div>
@@ -189,8 +189,8 @@ const enterFade = 'animate-enter fade-in-10 zoom-in-50 animate-duration-1000'
           >
             <i :class="[area.icon, '!text-2xl']" />
           </div>
-          <span class="text-xl font-bold text-center">{{ area.title }}</span>
-          <span class="text-muted-color text-center text-sm">{{ area.desc }}</span>
+          <span class="text-xl font-bold text-center">{{ t(area.title) }}</span>
+          <span class="text-muted-color text-center text-sm">{{ t(area.desc) }}</span>
         </div>
       </div>
     </section>
