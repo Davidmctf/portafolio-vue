@@ -74,4 +74,65 @@ export default {
     intermediate: 'Intermediate',
     col: { item: 'Description', period: 'Period' },
   },
+
+  timeline: {
+    title: 'Work experience',
+
+    mobiik: {
+      title: 'Full-Stack Developer',
+      company: 'mobiik',
+      period: '2023 - Present',
+      description:
+        'Cloud solutions development with AI integration, conversational agents using LangGraph and Claude AI, REST APIs with NestJS, frontends with Angular and Vue 3, and JIRA/Slack integrations.',
+    },
+
+    rocket: {
+      title: 'Full-Stack Developer',
+      company: 'The Rocket Code',
+      period: '2022 - 2023',
+      description:
+        'E-commerce platforms and digital solutions development using Angular, NestJS and Shopify Development with Liquid templating and GraphQL.',
+    },
+
+    blife: {
+      title: 'Full-Stack Developer',
+      company: 'BLIFE',
+      period: '2021 - 2022',
+      description:
+        'Internal ERP and mobile app development for business operations management using Angular, Node.js and relational databases.',
+    },
+
+    midoc: {
+      title: 'Full-Stack Developer',
+      company: 'MIDOCONLINE',
+      period: '2020 - 2021',
+      description:
+        'Online medical platform development with appointment, clinical record and payment modules. Stack: Angular, Laravel, MySQL and Azure.',
+    },
+
+    skytex: {
+      title: 'Full-Stack Developer',
+      company: 'Skytex México',
+      period: '2019 - 2020',
+      description:
+        'Development of "Skynet 2.0" ERP with SAT integration, electronic invoicing (CFDI), inventory control and reports. Stack: Angular, .NET, SQL Server.',
+    },
+
+    veterinaria: {
+      title: 'Freelance Web Developer',
+      company: 'Veterinaria Contla',
+      period: '2018 - 2019',
+      description:
+        'Management system for a veterinary clinic: appointments, patient history, medication inventory and basic billing.',
+    },
+  },
+
+  footer: {
+    tagline: 'Building digital products with passion and best practices.',
+    links: 'Navigation',
+    follow: 'Follow me',
+    download_cv: 'Download CV',
+    language: 'Language',
+    rights: 'All rights reserved.',
+  },
 }

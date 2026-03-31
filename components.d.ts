@@ -13,9 +13,11 @@ declare module 'vue' {
   export interface GlobalComponents {
     Avatar: typeof import('primevue/avatar')['default']
     Button: typeof import('primevue/button')['default']
+    Card: typeof import('primevue/card')['default']
     Chip: typeof import('primevue/chip')['default']
     Column: typeof import('primevue/column')['default']
     Divider: typeof import('primevue/divider')['default']
+    Galleria: typeof import('primevue/galleria')['default']
     IconField: typeof import('primevue/iconfield')['default']
     InputIcon: typeof import('primevue/inputicon')['default']
     InputText: typeof import('primevue/inputtext')['default']
@@ -29,6 +31,8 @@ declare module 'vue' {
     TabPanels: typeof import('primevue/tabpanels')['default']
     Tabs: typeof import('primevue/tabs')['default']
     Tag: typeof import('primevue/tag')['default']
+    Timeline: typeof import('primevue/timeline')['default']
+    TimeLine: typeof import('primevue/timeline')['default']
     Toolbar: typeof import('primevue/toolbar')['default']
     TreeTable: typeof import('primevue/treetable')['default']
   }

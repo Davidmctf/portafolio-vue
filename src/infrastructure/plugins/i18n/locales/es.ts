@@ -75,4 +75,65 @@ export default {
     intermediate: 'Intermedio',
     col: { item: 'Descripción', period: 'Período' },
   },
+
+  timeline: {
+    title: 'Experiencia laboral',
+
+    mobiik: {
+      title: 'Full-Stack Developer',
+      company: 'mobiik',
+      period: '2023 - Presente',
+      description:
+        'Desarrollo de soluciones cloud con integración de IA, agentes conversacionales con LangGraph y Claude AI, APIs REST con NestJS, frontends con Angular y Vue 3, e integraciones con JIRA y Slack.',
+    },
+
+    rocket: {
+      title: 'Full-Stack Developer',
+      company: 'The Rocket Code',
+      period: '2022 - 2023',
+      description:
+        'Desarrollo de plataformas e-commerce y soluciones digitales utilizando Angular, NestJS y Shopify Development con Liquid templating y GraphQL.',
+    },
+
+    blife: {
+      title: 'Full-Stack Developer',
+      company: 'BLIFE',
+      period: '2021 - 2022',
+      description:
+        'Desarrollo de ERP interno y app móvil para gestión de operaciones empresariales con Angular, Node.js y bases de datos relacionales.',
+    },
+
+    midoc: {
+      title: 'Full-Stack Developer',
+      company: 'MIDOCONLINE',
+      period: '2020 - 2021',
+      description:
+        'Desarrollo de plataforma médica online con módulos de citas, expedientes clínicos y pagos. Stack: Angular, Laravel, MySQL y Azure.',
+    },
+
+    skytex: {
+      title: 'Full-Stack Developer',
+      company: 'Skytex México',
+      period: '2019 - 2020',
+      description:
+        'Desarrollo del ERP "Skynet 2.0" con integración al SAT, módulo de facturación electrónica (CFDI), control de inventarios y reportes. Stack: Angular, .NET, SQL Server.',
+    },
+
+    veterinaria: {
+      title: 'Desarrollador Web Freelance',
+      company: 'Veterinaria Contla',
+      period: '2018 - 2019',
+      description:
+        'Desarrollo de sistema de gestión para clínica veterinaria: citas, historial de pacientes, inventario de medicamentos y facturación básica.',
+    },
+  },
+
+  footer: {
+    tagline: 'Construyendo productos digitales con pasión y buenas prácticas.',
+    links: 'Navegación',
+    follow: 'Sígueme',
+    download_cv: 'Descargar CV',
+    language: 'Idioma',
+    rights: 'Todos los derechos reservados.',
+  },
 }

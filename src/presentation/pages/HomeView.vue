@@ -2,6 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import type { TreeNode } from 'primevue/treenode'
 import DmcLogo from '@/presentation/components/DmcLogo.vue'
+import ExperienceTimeline from '@/presentation/components/ExperienceTimeline.vue'
 
 const { t } = useI18n()
 
@@ -230,4 +231,15 @@ const enterFade = 'animate-enter fade-in-10 zoom-in-50 animate-duration-1000'
       </div>
     </section>
   </div>
+
+  <Divider />
+
+  <!-- ░░ EXPERIENCIA ░░ -->
+  <section
+    id="experience"
+    v-animateonscroll="{ enterClass: 'animate-fadein' }"
+    class="max-w-5xl mx-auto px-6 py-16 w-full"
+  >
+    <ExperienceTimeline />
+  </section>
 </template>
